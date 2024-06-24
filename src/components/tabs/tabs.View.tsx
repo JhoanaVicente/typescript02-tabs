@@ -11,27 +11,49 @@ export default function TabsView({items, onChange}: TabsViewProps) {
         items.length >= 0 ? 0 : null
     );
 
+    function handleClick(index:number){
+        setSelected(index);
+    }
+
     if(selected == null){
         return null;
     }
 
-    return(
+    return (
         <div>
             <div>
               {items.map((item, index) => (
-                    <div>Item</div>
+                <TabView
+                  index={index}
+                  active={index == selected}
+                  item={item}
+                  onClick={handleClick}
+                />
               ))}
             </div>
 
             <div>
                 <div>
                     {items.map((item, index) => (
-                        <>{selected == index && <div>Content</div>}</>
+                        <>{selected == index && <item.content />}</>
                     ))}
                 </div>
             </div>
         </div>
+    );   
+}
+
+interface TabViewProps {
+    index: number;
+    active: boolean;
+    item: TabItem;
+    onClick: (index: number) => void;
+}
+
+function TabView({ index, active, item, onClick }: TabViewProps) {
+    return active? (
+        <div>{item.title}</div>
+    ) : (
+        <button onClick={() => onClick(index)}>{item.title}</button>
     );
-    
-   
 }
