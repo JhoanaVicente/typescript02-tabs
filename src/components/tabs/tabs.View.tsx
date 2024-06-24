@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { TabItem } from "./types/types";
+import styles from "./tabsView.module.css";
+import classnames from 'classnames';
 
 interface TabsViewProps {
     items: TabItem[];
@@ -22,11 +24,11 @@ export default function TabsView({items, onChange}: TabsViewProps) {
 
     return (
         <div>
-            <div>
+            <div className={styles.tabsContainer}>
               {items.map((item, index) => (
                 <TabView
                   index={index}
-                  active={index == selected}
+                  active={index === selected}
                   item={item}
                   onClick={handleClick}
                   key={item.id}
@@ -35,9 +37,9 @@ export default function TabsView({items, onChange}: TabsViewProps) {
             </div>
 
             <div>
-                <div>
+                <div className={styles.contentContainer}>
                     {items.map((item, index) => (
-                        <>{selected == index && <item.content key={item.id} />}</>
+                        <>{selected === index && <item.content key={item.id} />}</>
                     ))}
                 </div>
             </div>
@@ -54,8 +56,8 @@ interface TabViewProps {
 
 function TabView({ index, active, item, onClick }: TabViewProps) {
     return active? (
-        <div>{item.title}</div>
+        <div className={classnames(styles.tab, styles.activeTab)}>{item.title}</div>
     ) : (
-        <button onClick={() => onClick(index,item)}>{item.title}</button>
+        <button className={styles.tab} onClick={() => onClick(index,item)}>{item.title}</button>
     );
 }
