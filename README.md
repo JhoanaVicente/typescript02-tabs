@@ -10,8 +10,13 @@ cd typescript02-tabs
 
 Abrir el proyecto en Visual Studio Code:  
 code .  
+<div> style="text-align: center;">
+
 ![Configuration 1](./public/img/Configuration%20react.png)  
 ![Configuration 2](./public/img/Configuration2%20react.png)  
+![In another windows](./public/img/Another%20window.png)  
+
+</div>
 
 ## Estructura del proyecto  
 El proyecto sigue la estructura estándar de una aplicación creada con Create React App y TypeScript:  
