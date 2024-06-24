@@ -10,12 +10,11 @@ cd typescript02-tabs
 
 Abrir el proyecto en Visual Studio Code:  
 code .  
+
 <div> style="text-align: center;">
-
-![Configuration 1](./public/img/Configuration%20react.png)  
-![Configuration 2](./public/img/Configuration2%20react.png)  
-![In another windows](./public/img/Another%20window.png)  
-
+    <img src"./public/img/Configuration%20react.png" alt="Configuration1" style="margin: 10px; width: 80%;">
+    <img src"./public/img/Configuration2%20react.png" alt="Configuration2" style="margin: 10px; width: 80%;">
+    <img src"./public/img/Another%20window.png" alt="Configuration3" style="margin: 10px; width: 80%;">
 </div>
 
 ## Estructura del proyecto  
