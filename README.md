@@ -12,7 +12,9 @@ Abrir el proyecto en Visual Studio Code:
 code .  
 
 <div style="text-align: center;">
-    <img src"./public/img/Configuration%20react.png" alt="Configuration1" style="margin: 10px; width: 80%;">
+    <img src"./public/img/Configuration%20react.png" alt="Configuration1" style="margin: 10px; width: 45%;">
+    <img src"./public/img/Configuration2%20react.png" alt="Configuration2" style="margin: 10px; width: 45%;">
+    <img src"./public/img/Another%20window.png" alt="Configuration3" style="margin: 10px; width: 45%;">
 </div>
 
 ## Estructura del proyecto  
